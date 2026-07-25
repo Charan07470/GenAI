@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 groq_api_key=os.getenv("GROQ_API_KEY")
-model=ChatGroq(model="Gemma2-9b-It",groq_api_key=groq_api_key)
+model=ChatGroq(model="llama-3.1-8b-instant",groq_api_key=groq_api_key)
 
 # 1. Create prompt template
 system_template = "Translate the following into {language}:"
