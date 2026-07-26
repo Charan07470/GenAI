@@ -12,7 +12,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 PDF_PATH = Path("employee_handbook.pdf")
 
 
-# 1. Check whether the PDF exists
+
 if not PDF_PATH.exists():
     raise FileNotFoundError(
         f"PDF not found: {PDF_PATH.resolve()}"
@@ -94,7 +94,6 @@ Answer:
 )
 
 chain = prompt | llm | StrOutputParser()
-
 
 # 9. Ask a question
 question = "How many paid sick days do employees receive?"
